@@ -1,8 +1,0 @@
-R	260610140232Z	250610140646Z	21B0BDD7F0BF10F0B3761C31EC3A2F57879F9DA1	unknown	/C=FR/ST=Ile-de-France/O=MyServer/CN=server.local
-V	260610182237Z		1000	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-R	260610182359Z	250610182423Z	1001	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-V	260610183130Z		1002	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-V	260610183738Z		1003	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-V	260610184239Z		1004	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-R	260610185301Z	250610185349Z	1005	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
-V	260610191750Z		1006	unknown	/C=FR/ST=France/O=TestOrg/CN=client1
