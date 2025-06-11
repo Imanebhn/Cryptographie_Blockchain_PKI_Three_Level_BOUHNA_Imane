@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface PKI à 3 Niveaux</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Infrastructure à Clés Publiques (PKI) à 3 Niveaux</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" name="name" required>
+
+            <label for="role">Rôle :</label>
+            <select name="role" required>
+                <option value="client">Client</option>
+                <option value="serveur">Serveur</option>
+            </select>
+
+            <label for="code">Code unique :</label>
+            <input type="text" name="code" required>
+
+            <div class="buttons">
+                <button type="submit" name="action" value="generate">Générer Certificat</button>
+                <button type="submit" name="action" value="display">Afficher Certificat</button>
+                <button type="submit" name="action" value="revoke">Révoquer Certificat</button>
+            </div>
+        </form>
+
+        {% if cert %}
+            <div class="cert-display">
+                <h2>Contenu du Certificat</h2>
+                <pre>{{ cert }}</pre>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

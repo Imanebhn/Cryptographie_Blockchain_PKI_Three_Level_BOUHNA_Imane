@@ -1,0 +1,1 @@
+V	300609140057Z		1000	unknown	/C=FR/ST=Ile-de-France/O=MyIntermediateCA/CN=My Intermediate CA

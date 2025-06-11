@@ -1,0 +1,31 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir               = ./intermediate-ca
+certs             = $dir/certs
+crl_dir           = $dir/crl
+new_certs_dir     = $dir/newcerts
+database          = $dir/index.txt
+serial            = $dir/serial
+crlnumber         = $dir/crlnumber
+certificate       = $dir/certs/intermediate.cert.pem
+private_key       = $dir/private/intermediate.key.pem
+default_days      = 1000
+default_md        = sha256
+policy            = policy_loose
+email_in_dn       = no
+name_opt          = ca_default
+cert_opt          = ca_default
+copy_extensions   = copy
+unique_subject    = no
+default_crl_days  = 30
+
+[ policy_loose ]
+countryName             = optional
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
